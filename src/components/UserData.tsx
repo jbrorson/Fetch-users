@@ -29,7 +29,6 @@ export default function UserData({ users }: UserProps) {
           </li>
         ))}
       </ul>
-      <button>Hämta nya personer</button>
     </div>
   );
 }
