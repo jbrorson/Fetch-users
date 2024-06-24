@@ -1,15 +1,22 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #008b8b;
+}
+
 .App {
-  height: 100vh;
+  min-height: 100%;
   padding: 20px;
   text-align: center;
   box-sizing: border-box;
-  background: darkcyan;
-  color: white;
+  color: #ffffff;
 }
 
 .Error {
   background: #ff0055;
-  color: white;
+  color: #ffffff;
   padding: 1rem;
   border-radius: 4px;
   text-align: center;
