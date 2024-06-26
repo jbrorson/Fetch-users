@@ -1,4 +1,5 @@
-// Addera knapp för att addera fler users till listan
+import "./Button.css";
+
 type ButtonProps = {
   onClick: () => void;
   isFetching: boolean;

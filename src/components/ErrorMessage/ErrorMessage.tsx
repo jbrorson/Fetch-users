@@ -1,4 +1,4 @@
-// import '../App.css';
+import "./ErrorMessage.css";
 
 type ErrorMessageProps = {
   text: string;

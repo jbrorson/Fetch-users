@@ -12,11 +12,15 @@ I am using TypeScript for type safety in components and plain CSS for styling th
 
 - `src/`: Contains all the source code
   - `components/`: Contains all React components, each with its own directory
+    - `Button/`: Contains the Button component
+      - `Button.css`: Styling for the Button component
+      - `Button.tsx`: Implementation of the Button component
+    - `ErrorMessage/`: Contains the ErrorMessage component
+      - `ErrorMessage.css`: Styling for the ErrorMessage component
+      - `ErrorMessage.tsx`: Implementation of the ErrorMessage component
     - `Spinner/`: Contains the Spinner component
       - `Spinner.css`: Styling for the Spinner component
       - `Spinner.tsx`: Implementation of the Spinner component
-    - `ErrorMessage/`: Contains the ErrorMessage component
-      - `ErrorMessage.tsx`: Implementation of the ErrorMessage component
     - `UserData/`: Contains the UserData component
       - `UserData.css`: Styling for the UserData component
       - `UserData.tsx`: Implementation of the UserData component

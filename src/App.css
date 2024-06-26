@@ -13,20 +13,3 @@ body {
   box-sizing: border-box;
   color: #ffffff;
 }
-
-.Error {
-  background: #ff0055;
-  color: #ffffff;
-  padding: 1rem;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.Error h1 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.Error p {
-  margin: 0;
-}
