@@ -3,6 +3,7 @@ import { get } from "./util/http";
 import UserData, { User } from "./components/UserData";
 import ErrorMessage from "./components/ErrorMessage";
 import Button from "./components/Button";
+import Spinner from "./components/Spinner";
 import "./App.css";
 
 type RawUserData = {
@@ -29,7 +30,7 @@ function App() {
       setIsFetching(true);
       try {
         const data = (await get(
-          `https://randomuser.me/api/?results=4`
+          `https://randomuser.me/api/?results=1`
         )) as RawUserData;
         const userData: User[] = data.results.map((rawUser) => {
           return {
@@ -83,7 +84,7 @@ function App() {
   let content: ReactNode;
 
   if (isFetching && fetchedUsers.length === 0) {
-    content = <p>Hämtar användardata...</p>;
+    content = <Spinner text="Hämtar användardata..." />;
   } else if (error) {
     content = <ErrorMessage text={error} />;
   } else if (fetchedUsers) {
