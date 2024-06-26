@@ -1,21 +1,70 @@
 # Fetching random user data
 
+A project to apply for a role as Frontend Developer at Agria Djurförsäkring.
+
 ## About this project
 
-This project was created in order to show case my skills as a frontend developer. I got an assigment to setup a page, using React and TypeScript and to fetch data from the [Ramdom User Generator API](https://randomuser.me/) and display the data in a good looking way.
+This project was created in order to show case my skills as a frontend developer. I received an assignment to set up a page using React and TypeScript, fetch data from the [Ramdom User Generator API](https://randomuser.me/) and display the data in a visually appealing way.
 
-I'm usign TypeScript to get hold of types and I'm using plain CSS to style the page.
+I am using TypeScript for type safety in components and plain CSS for styling the page, including media queries to make it responsive.
+
+## Project Structure
+
+- `src/`: Contains all the source code
+  - `components/`: Contains all React components, each with its own directory
+    - `Spinner/`: Contains the Spinner component
+      - `Spinner.css`: Styling for the Spinner component
+      - `Spinner.tsx`: Implementation of the Spinner component
+    - `ErrorMessage/`: Contains the ErrorMessage component
+      - `ErrorMessage.tsx`: Implementation of the ErrorMessage component
+    - `UserData/`: Contains the UserData component
+      - `UserData.css`: Styling for the UserData component
+      - `UserData.tsx`: Implementation of the UserData component
+  - `App.tsx`: Main application component
+  - `index.tsx`: Entry point of the application
+  - `utils/`: Utility functions
+    - `http.ts`: Contains helper functions for HTTP requests
+    - `App.css`: Global styling for the application
+
+## Features
+
+- Fetches random user data from an API and displays it
+- Responsive design using CSS media queries
+- TypeScript for type safety
+- Error handling for API requests
 
 ## Get started
 
 In order to start this project, follow this steps:
 
-1. Make sure you have npm & git installed on your device
-2. Clone repo by using your terminal. Type `git clone [link-to-this-project]`
-3. cd in to the project
-4. Type `npm install` in order to install all dependencies
+1. Make sure you have npm & git installed on your machine
+2. Clone the repository using your terminal: `git clone [link-to-this-project]`
+3. Navigate into the project directory: `cd [project-directory]`
+4. Install all dependencies: `npm install`
 
-### `npm run start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+## Potential Improvements
+
+To enhance user experience, we could potentially:
+
+- Add local storage to save user data between sessions
+- Implement additional features like user search or filters
+- Improve the overall design and add animations
+
+## Contributing
+
+If you would like to contribute to this project, please fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+
+1. Fork the project
+2. Create your feature branch: `git checkout -b feat/AmazingFeature`
+3. Commit your changes: `git commit -m 'Add some AmazingFeature'`
+4. Push to the branch: `git push origin feat/AmazingFeature`
+5. Open a pull request
+
+## Author
+
+Josefine Brorson, 2024
