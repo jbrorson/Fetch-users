@@ -20,7 +20,11 @@ export default function UserData({ users }: UserProps) {
       <ul className="UserList">
         {users.map((user, index) => (
           <li className="UserCard" key={index}>
-            <img className="Image" {...user.image}></img>
+            <img
+              className="Image"
+              src={user.image.src}
+              alt={user.image.alt}
+            ></img>
             <div className="UserInfo">
               <h2 className="UserName">{user.name}</h2>
               <p className="UserEmail">{user.email}</p>
