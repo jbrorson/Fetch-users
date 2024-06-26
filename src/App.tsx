@@ -1,9 +1,9 @@
 import { useState, useEffect, ReactNode } from "react";
 import { get } from "./util/http";
-import UserData, { User } from "./components/UserData";
-import ErrorMessage from "./components/ErrorMessage";
-import Button from "./components/Button";
-import Spinner from "./components/Spinner";
+import UserData, { User } from "./components/UserData/UserData";
+import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
+import Button from "./components/Button/Button";
+import Spinner from "./components/Spinner/Spinner";
 import "./App.css";
 
 type RawUserData = {
