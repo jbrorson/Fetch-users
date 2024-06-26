@@ -25,60 +25,37 @@ function App() {
   const [isFetching, setIsFetching] = useState(false);
   const [error, setError] = useState<string>();
 
-  useEffect(() => {
-    async function fetchUsers() {
-      setIsFetching(true);
-      try {
-        const data = (await get(
-          `https://randomuser.me/api/?results=1`
-        )) as RawUserData;
-        const userData: User[] = data.results.map((rawUser) => {
-          return {
-            name: `${rawUser.name.first} ${rawUser.name.last}`,
-            email: rawUser.email,
-            phone: rawUser.phone,
-            image: {
-              alt: "User Profile Image",
-              src: rawUser.picture.large,
-            },
-          };
-        });
-        setFetchedUsers(userData);
-      } catch (error) {
-        if (error instanceof Error) {
-          setError(error.message);
-        }
-      }
-      setIsFetching(false);
-    }
-
-    fetchUsers();
-  }, []);
-
-  const handleAddUser = async () => {
+  const fetchUser = async () => {
     setIsFetching(true);
     try {
       const data = (await get(
         `https://randomuser.me/api/?results=1`
       )) as RawUserData;
-      const newUser = data.results.map((rawUser) => {
-        return {
-          name: `${rawUser.name.first} ${rawUser.name.last}`,
-          email: rawUser.email,
-          phone: rawUser.phone,
-          image: {
-            alt: "User Profile Image",
-            src: rawUser.picture.large,
-          },
-        };
-      });
+      const newUser = data.results.map((rawUser) => ({
+        name: `${rawUser.name.first} ${rawUser.name.last}`,
+        email: rawUser.email,
+        phone: rawUser.phone,
+        image: {
+          alt: "User Profile Image",
+          src: rawUser.picture.large,
+        },
+      }));
       setFetchedUsers((prevUsers) => [...prevUsers, ...newUser]);
     } catch (error) {
       if (error instanceof Error) {
         setError(error.message);
       }
+    } finally {
+      setIsFetching(false);
     }
-    setIsFetching(false);
+  };
+
+  useEffect(() => {
+    fetchUser();
+  }, []);
+
+  const handleAddUser = () => {
+    fetchUser();
   };
 
   let content: ReactNode;
@@ -87,7 +64,7 @@ function App() {
     content = <Spinner text="Hämtar användardata..." />;
   } else if (error) {
     content = <ErrorMessage text={error} />;
-  } else if (fetchedUsers) {
+  } else if (fetchedUsers.length > 0) {
     content = <UserData users={fetchedUsers} />;
   }
 
