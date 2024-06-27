@@ -4,9 +4,9 @@ A project to apply for a role as Frontend Developer at Agria Djurförsäkring.
 
 ## About this project
 
-This project was created in order to show case my skills as a frontend developer. I received an assignment to set up a page using React and TypeScript, fetch data from the [Ramdom User Generator API](https://randomuser.me/) and display the data in a visually appealing way.
+A React application that fetches and displays random user data from the [Ramdom User Generator API](https://randomuser.me/). The app shows the user's name, email, phone number, and profile picture. It also has a button to fetch additional users and displays a loading indicator while data is being fetched.
 
-I am using TypeScript for type safety in components and plain CSS for styling the page, including media queries to make it responsive.
+I am using TypeScript for type safety and plain CSS for styling the page, including media queries to make it responsive.
 
 ## Project Structure
 
@@ -24,11 +24,10 @@ I am using TypeScript for type safety in components and plain CSS for styling th
     - `UserData/`: Contains the UserData component
       - `UserData.css`: Styling for the UserData component
       - `UserData.tsx`: Implementation of the UserData component
-  - `App.tsx`: Main application component
-  - `index.tsx`: Entry point of the application
+  - `App.tsx`: Main application component that manages state and API calls
+  - `App.css`: Global styling for the application
   - `utils/`: Utility functions
     - `http.ts`: Contains helper functions for HTTP requests
-    - `App.css`: Global styling for the application
 
 ## Features
 
